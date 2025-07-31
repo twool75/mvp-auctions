@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sign Up – MVP Auctions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/images/logo.png"
+            alt="MVP Auctions logo"
+            class="logo"
+          />
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="auctions.html" class="nav-item">Auctions</a>
+          <a href="sell.html" class="nav-item">Sell</a>
+          <a href="about.html" class="nav-item">About</a>
+          <a href="contact.html" class="nav-item">Contact</a>
+          <a href="blog.html" class="nav-item">Blog</a>
+          <!-- Admin link intentionally removed from public navigation -->
+          <!-- Highlight sign‑up as the active page -->
+          <a
+            href="signup.html"
+            class="btn btn-primary active"
+            >Sign Up</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Sign‑up header -->
+    <section class="hero" style="height: 45vh; min-height: 300px;">
+      <div class="hero-overlay"></div>
+      <img
+        src="assets/images/hero-bg.png"
+        alt="Abstract sports background"
+        class="hero-bg"
+      />
+      <div class="hero-content container">
+        <h1>Create Your Account</h1>
+        <p>
+          Join our community of collectors and start bidding on the items you
+          love.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sign‑up form section -->
+    <section class="section-light">
+      <div class="container">
+        <h2 class="section-title">Sign Up</h2>
+        <form
+          class="contact-form"
+          onsubmit="event.preventDefault(); alert('Thank you for signing up! Your account will be created shortly.');"
+        >
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input
+              type="email"
+              id="signup-email"
+              name="signup-email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              required
+            />
+          </div>
+
+          <!-- Phone number for SMS notifications -->
+          <div class="form-group">
+            <label for="phone-number">Phone Number (optional)</label>
+            <input
+              type="tel"
+              id="phone-number"
+              name="phone-number"
+              placeholder="e.g. (555) 123‑4567"
+            />
+          </div>
+          <div class="form-group">
+            <label><input type="checkbox" id="sms-opt-in" name="sms-opt-in" />
+              I would like to receive text message notifications when I’m outbid or auctions close.</label>
+          </div>
+
+          <!-- Social login buttons -->
+          <div class="form-group" style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center;">
+            <a href="#" class="btn btn-secondary" onclick="event.preventDefault(); alert('Google login coming soon!');" style="flex:1; text-align:center;">Sign Up with Google</a>
+            <a href="#" class="btn btn-secondary" onclick="event.preventDefault(); alert('Facebook login coming soon!');" style="flex:1; text-align:center;">Sign Up with Facebook</a>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Create Account
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <img
+            src="assets/images/logo.png"
+            alt="MVP Auctions logo"
+            class="footer-logo"
+          />
+          <p>
+            MVP Auctions connects collectors with the most sought‑after sports
+            cards and memorabilia in the world.
+          </p>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="auctions.html">Auctions</a>
+          <a href="sell.html">Sell</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+        <div class="footer-right">
+          <p>&copy; 2025 MVP Auctions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

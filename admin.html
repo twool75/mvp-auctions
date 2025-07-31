@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Admin Panel – MVP Auctions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/images/logo.png"
+            alt="MVP Auctions logo"
+            class="logo"
+          />
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="auctions.html" class="nav-item">Auctions</a>
+          <a href="sell.html" class="nav-item">Sell</a>
+          <a href="about.html" class="nav-item">About</a>
+          <a href="contact.html" class="nav-item">Contact</a>
+          <a href="admin.html" class="nav-item active">Admin</a>
+          <a href="blog.html" class="nav-item">Blog</a>
+          <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Admin header -->
+    <section class="hero" style="height: 40vh; min-height: 280px;">
+      <div class="hero-overlay"></div>
+      <img
+        src="assets/images/hero-bg.png"
+        alt="Abstract sports background"
+        class="hero-bg"
+      />
+      <div class="hero-content container">
+        <h1>Admin Dashboard</h1>
+        <p>
+          Manage the auctions displayed on the home page. Changes will be saved
+          locally in your browser and reflected when visitors load the
+          homepage.
+        </p>
+      </div>
+    </section>
+
+    <!-- Admin form section -->
+    <section class="section-light">
+      <div class="container">
+        <h2 class="section-title">Manage Auctions</h2>
+        <p style="max-width: 800px; margin: 0 auto 1.5rem; text-align: center; font-size: 1rem; color: var(--muted-text);">
+          Edit the titles, current bid amounts and end times for each auction
+          card. Use ISO format (YYYY‑MM‑DDTHH:MM) for deadlines. When you
+          save, your changes are stored in the browser and will persist until
+          you clear your data.
+        </p>
+        <form id="admin-form" class="contact-form">
+          <h3 style="margin-top: 0;">Trending Auctions</h3>
+          <!-- Trending auction 1 -->
+          <div class="form-group">
+            <label for="t1-title">Trending #1 Title</label>
+            <input type="text" id="t1-title" required />
+          </div>
+          <div class="form-group">
+            <label for="t1-bid">Trending #1 Current Bid</label>
+            <input type="text" id="t1-bid" required />
+          </div>
+          <div class="form-group">
+            <label for="t1-deadline">Trending #1 Deadline</label>
+            <input type="datetime-local" id="t1-deadline" required />
+          </div>
+
+          <!-- Trending auction 2 -->
+          <div class="form-group">
+            <label for="t2-title">Trending #2 Title</label>
+            <input type="text" id="t2-title" required />
+          </div>
+          <div class="form-group">
+            <label for="t2-bid">Trending #2 Current Bid</label>
+            <input type="text" id="t2-bid" required />
+          </div>
+          <div class="form-group">
+            <label for="t2-deadline">Trending #2 Deadline</label>
+            <input type="datetime-local" id="t2-deadline" required />
+          </div>
+
+          <!-- Trending auction 3 -->
+          <div class="form-group">
+            <label for="t3-title">Trending #3 Title</label>
+            <input type="text" id="t3-title" required />
+          </div>
+          <div class="form-group">
+            <label for="t3-bid">Trending #3 Current Bid</label>
+            <input type="text" id="t3-bid" required />
+          </div>
+          <div class="form-group">
+            <label for="t3-deadline">Trending #3 Deadline</label>
+            <input type="datetime-local" id="t3-deadline" required />
+          </div>
+
+          <h3 style="margin-top: 2rem;">Featured Auctions</h3>
+          <!-- Featured auction 1 -->
+          <div class="form-group">
+            <label for="f1-title">Featured #1 Title</label>
+            <input type="text" id="f1-title" required />
+          </div>
+          <div class="form-group">
+            <label for="f1-bid">Featured #1 Current Bid</label>
+            <input type="text" id="f1-bid" required />
+          </div>
+          <div class="form-group">
+            <label for="f1-deadline">Featured #1 Deadline</label>
+            <input type="datetime-local" id="f1-deadline" required />
+          </div>
+
+          <!-- Featured auction 2 -->
+          <div class="form-group">
+            <label for="f2-title">Featured #2 Title</label>
+            <input type="text" id="f2-title" required />
+          </div>
+          <div class="form-group">
+            <label for="f2-bid">Featured #2 Current Bid</label>
+            <input type="text" id="f2-bid" required />
+          </div>
+          <div class="form-group">
+            <label for="f2-deadline">Featured #2 Deadline</label>
+            <input type="datetime-local" id="f2-deadline" required />
+          </div>
+
+          <!-- Featured auction 3 -->
+          <div class="form-group">
+            <label for="f3-title">Featured #3 Title</label>
+            <input type="text" id="f3-title" required />
+          </div>
+          <div class="form-group">
+            <label for="f3-bid">Featured #3 Current Bid</label>
+            <input type="text" id="f3-bid" required />
+          </div>
+          <div class="form-group">
+            <label for="f3-deadline">Featured #3 Deadline</label>
+            <input type="datetime-local" id="f3-deadline" required />
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">
+            Save Changes
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Analytics dashboard section -->
+    <section class="section-light">
+      <div class="container">
+        <h2 class="section-title">Auction Insights</h2>
+        <p style="max-width: 700px; margin: 0 auto 1.5rem; text-align: center; font-size: 1rem; color: var(--muted-text);">
+          Visualize how your listings perform. The chart below shows sample data for views, bids and final sale prices across several sample auctions. In a full implementation, this dashboard would update in real time based on your auction activity.
+        </p>
+        <canvas id="analyticsChart" width="600" height="350" style="max-width:100%; margin:0 auto;"></canvas>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <img
+            src="assets/images/logo.png"
+            alt="MVP Auctions logo"
+            class="footer-logo"
+          />
+          <p>
+            MVP Auctions connects collectors with the most sought‑after sports
+            cards and memorabilia in the world.
+          </p>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="auctions.html">Auctions</a>
+          <a href="sell.html">Sell</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+        <div class="footer-right">
+          <p>&copy; 2025 MVP Auctions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Load Chart.js for analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      // Populate the admin form with existing data or defaults
+      document.addEventListener('DOMContentLoaded', function () {
+        const defaultTrending = [
+          { title: 'Basketball Rookie Card', bid: '$2,750', deadline: '2025-08-01T20:00:00' },
+          { title: 'Sports Card Collection Lot', bid: '$1,150', deadline: '2025-08-03T14:30:00' },
+          { title: 'Memorabilia Bundle', bid: '$3,600', deadline: '2025-08-05T09:00:00' },
+        ];
+        const defaultFeatured = [
+          { title: 'Vintage Auctioneer Gavel', bid: '$1,350', deadline: '2025-08-10T12:00:00' },
+          { title: 'Signed Basketball', bid: '$2,900', deadline: '2025-08-12T17:30:00' },
+          { title: 'Autographed Baseball Collection', bid: '$3,250', deadline: '2025-08-14T15:45:00' },
+        ];
+        let trendingData;
+        let featuredData;
+        try {
+          trendingData = JSON.parse(localStorage.getItem('trendingAuctions'));
+          if (!Array.isArray(trendingData)) trendingData = defaultTrending;
+        } catch (e) {
+          trendingData = defaultTrending;
+        }
+        try {
+          featuredData = JSON.parse(localStorage.getItem('featuredAuctions'));
+          if (!Array.isArray(featuredData)) featuredData = defaultFeatured;
+        } catch (e) {
+          featuredData = defaultFeatured;
+        }
+        // populate trending inputs
+        trendingData.forEach((item, idx) => {
+          document.getElementById(`t${idx + 1}-title`).value = item.title || '';
+          document.getElementById(`t${idx + 1}-bid`).value = item.bid || '';
+          // Convert ISO string to datetime-local value (drop seconds)
+          const dl = item.deadline ? item.deadline.slice(0, 16) : '';
+          document.getElementById(`t${idx + 1}-deadline`).value = dl;
+        });
+        // populate featured inputs
+        featuredData.forEach((item, idx) => {
+          document.getElementById(`f${idx + 1}-title`).value = item.title || '';
+          document.getElementById(`f${idx + 1}-bid`).value = item.bid || '';
+          const dl = item.deadline ? item.deadline.slice(0, 16) : '';
+          document.getElementById(`f${idx + 1}-deadline`).value = dl;
+        });
+
+        document.getElementById('admin-form').addEventListener('submit', function (ev) {
+          ev.preventDefault();
+          const newTrending = [];
+          for (let i = 1; i <= 3; i++) {
+            let deadlineVal = document.getElementById(`t${i}-deadline`).value.trim();
+            if (deadlineVal && deadlineVal.length === 16) deadlineVal += ':00';
+            newTrending.push({
+              title: document.getElementById(`t${i}-title`).value.trim(),
+              bid: document.getElementById(`t${i}-bid`).value.trim(),
+              deadline: deadlineVal,
+            });
+          }
+          const newFeatured = [];
+          for (let i = 1; i <= 3; i++) {
+            let deadlineVal = document.getElementById(`f${i}-deadline`).value.trim();
+            if (deadlineVal && deadlineVal.length === 16) deadlineVal += ':00';
+            newFeatured.push({
+              title: document.getElementById(`f${i}-title`).value.trim(),
+              bid: document.getElementById(`f${i}-bid`).value.trim(),
+              deadline: deadlineVal,
+            });
+          }
+          localStorage.setItem('trendingAuctions', JSON.stringify(newTrending));
+          localStorage.setItem('featuredAuctions', JSON.stringify(newFeatured));
+          alert('Changes saved! Refresh the home page to see your updates.');
+        });
+
+      // Initialize a sample analytics chart
+      const ctx = document.getElementById('analyticsChart').getContext('2d');
+      const analyticsChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Rookie Card', 'Card Lot', 'Memorabilia Bundle', 'Vintage Trio', 'Football Card', 'Signed Jersey'],
+          datasets: [
+            {
+              label: 'Views',
+              data: [1200, 980, 1500, 700, 650, 900],
+              backgroundColor: 'rgba(32, 108, 204, 0.5)',
+              borderColor: 'rgba(32, 108, 204, 1)',
+              borderWidth: 1,
+            },
+            {
+              label: 'Bids',
+              data: [25, 18, 30, 14, 12, 20],
+              backgroundColor: 'rgba(231, 76, 60, 0.5)',
+              borderColor: 'rgba(231, 76, 60, 1)',
+              borderWidth: 1,
+            },
+            {
+              label: 'Final Sale Price ($)',
+              data: [4500, 2150, 5200, 3000, 950, 4800],
+              backgroundColor: 'rgba(46, 204, 113, 0.5)',
+              borderColor: 'rgba(46, 204, 113, 1)',
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: { beginAtZero: true },
+          },
+          plugins: {
+            title: {
+              display: true,
+              text: 'Sample Auction Performance',
+            },
+          },
+        },
+      });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

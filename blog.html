@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Blog – MVP Auctions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo-link">
+          <img src="assets/images/logo.png" alt="MVP Auctions logo" class="logo" />
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="auctions.html" class="nav-item">Auctions</a>
+          <a href="sell.html" class="nav-item">Sell</a>
+          <a href="about.html" class="nav-item">About</a>
+          <a href="contact.html" class="nav-item">Contact</a>
+          <a href="blog.html" class="nav-item active">Blog</a>
+          <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero" style="height: 45vh; min-height: 300px;">
+      <div class="hero-overlay"></div>
+      <img src="assets/images/hero-bg.png" alt="Abstract sports background" class="hero-bg" />
+      <div class="hero-content container">
+        <h1>From the MVP Blog</h1>
+        <p>
+          Insightful articles, collecting tips and stories from the world of sports cards and memorabilia.
+        </p>
+      </div>
+    </section>
+
+    <!-- Blog posts section -->
+    <section class="section-light">
+      <div class="container">
+        <h2 class="section-title">Latest Articles</h2>
+        <div class="cards-grid">
+          <!-- Blog post 1 -->
+          <div class="auction-card" style="background-color: var(--light-bg);">
+            <img src="assets/images/trending1.png" alt="Basketball rookie card blog post" class="auction-img" />
+            <div class="auction-info">
+              <h3>Collecting Rookie Cards: A Beginner’s Guide</h3>
+              <p style="margin-bottom: 1rem;">
+                Discover the history of rookie cards and what makes them so valuable. Learn how to spot hidden gems and protect your investment.
+              </p>
+              <a href="#" class="btn btn-tertiary" onclick="event.preventDefault(); alert('Blog article pages coming soon!');">Read More</a>
+            </div>
+          </div>
+          <!-- Blog post 2 -->
+          <div class="auction-card" style="background-color: var(--light-bg);">
+            <img src="assets/images/featured_basketball.png" alt="Live bidding strategies blog post" class="auction-img" />
+            <div class="auction-info">
+              <h3>Winning Strategies for Live Bidding</h3>
+              <p style="margin-bottom: 1rem;">
+                Step up your game! We break down proven tactics to help you stay ahead of the competition during fast‑paced auctions.
+              </p>
+              <a href="#" class="btn btn-tertiary" onclick="event.preventDefault(); alert('Blog article pages coming soon!');">Read More</a>
+            </div>
+          </div>
+          <!-- Blog post 3 -->
+          <div class="auction-card" style="background-color: var(--light-bg);">
+            <img src="assets/images/featured_baseball.png" alt="Shipping rare cards blog post" class="auction-img" />
+            <div class="auction-info">
+              <h3>Safely Shipping Your Valuable Cards</h3>
+              <p style="margin-bottom: 1rem;">
+                Learn the best practices for packing and shipping high‑value cards and memorabilia to ensure they arrive in pristine condition.
+              </p>
+              <a href="#" class="btn btn-tertiary" onclick="event.preventDefault(); alert('Blog article pages coming soon!');">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <img src="assets/images/logo.png" alt="MVP Auctions logo" class="footer-logo" />
+          <p>
+            MVP Auctions connects collectors with the most sought‑after sports cards and memorabilia in the world. Built with an elite spirit for
+            fans, by fans.
+          </p>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="auctions.html">Auctions</a>
+          <a href="sell.html">Sell</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+        <div class="footer-right">
+          <p>&copy; 2025 MVP Auctions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

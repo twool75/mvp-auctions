@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Auctions – MVP Auctions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo-link">
+          <img src="assets/images/logo.png" alt="MVP Auctions logo" class="logo" />
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="auctions.html" class="nav-item active">Auctions</a>
+          <a href="sell.html" class="nav-item">Sell</a>
+          <a href="about.html" class="nav-item">About</a>
+          <a href="contact.html" class="nav-item">Contact</a>
+          <a href="blog.html" class="nav-item">Blog</a>
+          <!-- Admin link intentionally removed from public navigation -->
+          <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Auctions listing -->
+    <section class="section-light">
+      <div class="container">
+        <h1 class="section-title">Active Auctions</h1>
+        <!-- Search and filter row -->
+        <div class="search-filter">
+          <input
+            type="text"
+            placeholder="Search cards, memorabilia, sets…"
+            class="search-input"
+          />
+          <select class="filter-select">
+            <option value="all">All Categories</option>
+            <option value="basketball">Basketball</option>
+            <option value="baseball">Baseball</option>
+            <option value="football">Football</option>
+            <option value="other">Other</option>
+          </select>
+          <!-- Additional filters for price range and auction type (UI only) -->
+          <select class="filter-select">
+            <option value="any">Any Price</option>
+            <option value="0-500">Under $500</option>
+            <option value="500-1500">$500 – $1,500</option>
+            <option value="1500-5000">$1,500 – $5,000</option>
+            <option value="5000+">Over $5,000</option>
+          </select>
+          <select class="filter-select">
+            <option value="all">All Types</option>
+            <option value="auction">Auction</option>
+            <option value="buy-now">Buy Now</option>
+          </select>
+
+          <!-- Condition filter (UI only) -->
+          <select class="filter-select">
+            <option value="any">Any Condition</option>
+            <option value="mint">Mint</option>
+            <option value="near-mint">Near Mint</option>
+            <option value="good">Good</option>
+            <option value="poor">Poor</option>
+          </select>
+          <!-- Sort by filter (UI only) -->
+          <select class="filter-select">
+            <option value="ending-soon">Ending Soonest</option>
+            <option value="recent">Newest Listings</option>
+            <option value="high-bid">Highest Bid</option>
+            <option value="low-bid">Lowest Bid</option>
+          </select>
+        </div>
+        <!-- Auction cards grid -->
+        <div class="cards-grid" style="margin-top: 2rem;">
+          <!-- We'll reuse the three sample cards multiple times to illustrate a listing -->
+          <div class="auction-card">
+            <img src="assets/images/trending1.png" alt="Basketball card" class="auction-img" />
+            <div class="auction-info">
+              <h3>Basketball Rookie Card</h3>
+              <p class="current-bid">Current Bid: <span>$2,750</span></p>
+              <p class="ends-in" data-deadline="2025-08-01T20:00:00">
+                Ends in: <span class="countdown">--:--:--</span>
+              </p>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <a href="auction-item.html" class="btn btn-tertiary">Bid Now</a>
+                <a href="#" class="btn btn-primary" onclick="event.preventDefault(); alert('Buy Now feature coming soon!');">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="auction-card">
+            <img src="assets/images/trending2.png" alt="Sports card lot" class="auction-img" />
+            <div class="auction-info">
+              <h3>Sports Card Collection Lot</h3>
+              <p class="current-bid">Current Bid: <span>$1,150</span></p>
+              <p class="ends-in" data-deadline="2025-08-03T14:30:00">
+                Ends in: <span class="countdown">--:--:--</span>
+              </p>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <a href="auction-item.html" class="btn btn-tertiary">Bid Now</a>
+                <a href="#" class="btn btn-primary" onclick="event.preventDefault(); alert('Buy Now feature coming soon!');">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="auction-card">
+            <img src="assets/images/trending3.png" alt="Memorabilia bundle" class="auction-img" />
+            <div class="auction-info">
+              <h3>Memorabilia Bundle</h3>
+              <p class="current-bid">Current Bid: <span>$3,600</span></p>
+              <p class="ends-in" data-deadline="2025-08-05T09:00:00">
+                Ends in: <span class="countdown">--:--:--</span>
+              </p>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <a href="auction-item.html" class="btn btn-tertiary">Bid Now</a>
+                <a href="#" class="btn btn-primary" onclick="event.preventDefault(); alert('Buy Now feature coming soon!');">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Additional sample cards (duplicates) -->
+          <div class="auction-card">
+            <img src="assets/images/trending2.png" alt="Sports card lot" class="auction-img" />
+            <div class="auction-info">
+              <h3>Vintage Card Trio</h3>
+              <p class="current-bid">Current Bid: <span>$2,200</span></p>
+              <p class="ends-in" data-deadline="2025-08-04T11:00:00">
+                Ends in: <span class="countdown">--:--:--</span>
+              </p>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <a href="auction-item.html" class="btn btn-tertiary">Bid Now</a>
+                <a href="#" class="btn btn-primary" onclick="event.preventDefault(); alert('Buy Now feature coming soon!');">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="auction-card">
+            <img src="assets/images/trending1.png" alt="Basketball card" class="auction-img" />
+            <div class="auction-info">
+              <h3>1990s Football Card</h3>
+              <p class="current-bid">Current Bid: <span>$950</span></p>
+              <p class="ends-in" data-deadline="2025-08-06T18:45:00">
+                Ends in: <span class="countdown">--:--:--</span>
+              </p>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <a href="auction-item.html" class="btn btn-tertiary">Bid Now</a>
+                <a href="#" class="btn btn-primary" onclick="event.preventDefault(); alert('Buy Now feature coming soon!');">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="auction-card">
+            <img src="assets/images/trending3.png" alt="Memorabilia bundle" class="auction-img" />
+            <div class="auction-info">
+              <h3>Signed Jersey &amp; Card</h3>
+              <p class="current-bid">Current Bid: <span>$4,800</span></p>
+              <p class="ends-in" data-deadline="2025-08-07T22:15:00">
+                Ends in: <span class="countdown">--:--:--</span>
+              </p>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <a href="auction-item.html" class="btn btn-tertiary">Bid Now</a>
+                <a href="#" class="btn btn-primary" onclick="event.preventDefault(); alert('Buy Now feature coming soon!');">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <img src="assets/images/logo.png" alt="MVP Auctions logo" class="footer-logo" />
+          <p>MVP Auctions connects collectors with the most sought‑after sports cards and memorabilia in the world.</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="auctions.html">Auctions</a>
+          <a href="sell.html">Sell</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+        <div class="footer-right">
+          <p>&copy; 2025 MVP Auctions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

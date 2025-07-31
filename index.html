@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVP Auctions – Elite Sports Card & Memorabilia Auctions</title>
+    <!--
+      MVP Auctions home page
+
+      This document defines the landing page for the MVP Auctions platform. It
+      embraces a clean, modern aesthetic with a dark navy and red colour
+      palette that echoes the included logo. The structure of the page
+      emphasises clarity: a prominent hero header introduces the brand and
+      invites users to explore ongoing auctions, followed by sections that
+      describe what makes the platform unique and a grid of trending auctions.
+
+      External resources are kept minimal to ensure fast load times. All
+      styling is defined in the accompanying style.css file and interactive
+      behaviour (such as the countdown timers) lives in script.js. Remember
+      to update these files if you adjust class names or HTML structure.
+    -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/images/logo.png"
+            alt="MVP Auctions logo"
+            class="logo"
+          />
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-item active">Home</a>
+          <a href="auctions.html" class="nav-item">Auctions</a>
+          <a href="sell.html" class="nav-item">Sell</a>
+          <a href="about.html" class="nav-item">About</a>
+          <a href="contact.html" class="nav-item">Contact</a>
+          <a href="blog.html" class="nav-item">Blog</a>
+          <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <img
+        src="assets/images/hero-bg.png"
+        alt="Sports cards and gavel abstract background"
+        class="hero-bg"
+      />
+      <div class="hero-content container">
+        <h1 class="promo-heading">Welcome to MVP Auctions!</h1>
+        <p class="promo-text">
+          First‑time sellers will be entered into a huge giveaway and will have their fee waived on their first sale.
+        </p>
+        <p>
+          Discover rare cards, signed jerseys and one‑of‑a‑kind collectibles.
+          Experience thrilling real‑time bidding with complete confidence.
+        </p>
+        <a href="auctions.html" class="btn btn-secondary">Explore Auctions</a>
+      </div>
+    </section>
+
+
+    <!-- Decorative wave divider -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style="display:block; width:100%; height:80px;"><path d="M0,32L80,37.3C160,43,320,53,480,42.7C640,32,800,0,960,5.3C1120,11,1280,53,1360,74.7L1440,96V0H0Z" fill="var(--primary-color)"></path></svg>
+    </div>
+    <!-- Trending auctions section -->
+    <section class="section-light">
+      <div class="container">
+        <h2 class="section-title">Trending Auctions</h2>
+        <div class="cards-grid" id="trending-cards">
+          <!-- Auction card 1 -->
+          <div class="auction-card">
+            <img
+              src="assets/images/trending1.png"
+              alt="Stylised basketball trading card"
+              class="auction-img"
+            />
+            <div class="auction-info">
+              <h3>Basketball Rookie Card</h3>
+              <p class="current-bid">Current Bid: <span>$2,750</span></p>
+              <p class="ends-in" data-deadline="2025-08-01T20:00:00">
+                Ends in: <span class="countdown">--:--:--</span>
+              </p>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <a href="auction-item.html" class="btn btn-tertiary">Bid Now</a>
+                <a href="#" class="btn btn-primary" onclick="event.preventDefault(); alert('Buy Now feature coming soon!');">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Auction card 2 -->
+          <div class="auction-card">
+            <img
+              src="assets/images/trending2.png"
+              alt="Stylised collage of sports trading cards"
+              class="auction-img"
+            />
+            <div class="auction-info">
+              <h3>Sports Card Collection Lot</h3>
+              <p class="current-bid">Current Bid: <span>$1,150</span></p>
+              <p class="ends-in" data-deadline="2025-08-03T14:30:00">
+                Ends in: <span class="countdown">--:--:--</span>
+              </p>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <a href="auction-item.html" class="btn btn-tertiary">Bid Now</a>
+                <a href="#" class="btn btn-primary" onclick="event.preventDefault(); alert('Buy Now feature coming soon!');">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Auction card 3 -->
+          <div class="auction-card">
+            <img
+              src="assets/images/trending3.png"
+              alt="Stylised sports cards collage with gavel"
+              class="auction-img"
+            />
+            <div class="auction-info">
+              <h3>Memorabilia Bundle</h3>
+              <p class="current-bid">Current Bid: <span>$3,600</span></p>
+              <p class="ends-in" data-deadline="2025-08-05T09:00:00">
+                Ends in: <span class="countdown">--:--:--</span>
+              </p>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <a href="auction-item.html" class="btn btn-tertiary">Bid Now</a>
+                <a href="#" class="btn btn-primary" onclick="event.preventDefault(); alert('Buy Now feature coming soon!');">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured auctions section -->
+    <section class="section-light">
+      <div class="container">
+        <h2 class="section-title">Featured Auctions</h2>
+        <div class="cards-grid" id="featured-cards">
+          <!-- Featured card 1 -->
+          <div class="auction-card">
+            <img
+              src="assets/images/featured_gavel.png"
+              alt="Wooden gavel representing auctions"
+              class="auction-img"
+            />
+            <div class="auction-info">
+              <h3>Vintage Auctioneer Gavel</h3>
+              <p class="current-bid">Current Bid: <span>$1,350</span></p>
+              <p class="ends-in" data-deadline="2025-08-10T12:00:00">
+                Ends in: <span class="countdown">--:--:--</span>
+              </p>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <a href="auction-item.html" class="btn btn-tertiary">Bid Now</a>
+                <a href="#" class="btn btn-primary" onclick="event.preventDefault(); alert('Buy Now feature coming soon!');">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Featured card 2 -->
+          <div class="auction-card">
+            <img
+              src="assets/images/featured_basketball.png"
+              alt="Detailed basketball close-up"
+              class="auction-img"
+            />
+            <div class="auction-info">
+              <h3>Signed Basketball</h3>
+              <p class="current-bid">Current Bid: <span>$2,900</span></p>
+              <p class="ends-in" data-deadline="2025-08-12T17:30:00">
+                Ends in: <span class="countdown">--:--:--</span>
+              </p>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <a href="auction-item.html" class="btn btn-tertiary">Bid Now</a>
+                <a href="#" class="btn btn-primary" onclick="event.preventDefault(); alert('Buy Now feature coming soon!');">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Featured card 3 -->
+          <div class="auction-card">
+            <img
+              src="assets/images/featured_baseball.png"
+              alt="Collection of autographed baseballs in display cubes"
+              class="auction-img"
+            />
+            <div class="auction-info">
+              <h3>Autographed Baseball Collection</h3>
+              <p class="current-bid">Current Bid: <span>$3,250</span></p>
+              <p class="ends-in" data-deadline="2025-08-14T15:45:00">
+                Ends in: <span class="countdown">--:--:--</span>
+              </p>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <a href="auction-item.html" class="btn btn-tertiary">Bid Now</a>
+                <a href="#" class="btn btn-primary" onclick="event.preventDefault(); alert('Buy Now feature coming soon!');">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live auctions section -->
+    <section class="section-dark">
+      <div class="container">
+        <h2 class="section-title-light">Experience Live Auctions</h2>
+        <p style="max-width: 700px; margin: 0 auto; text-align: center; color: var(--text-light);">
+          Join our live‑streamed auctions to bid in real time from anywhere in the world. Watch the action unfold with high‑quality video and audio.
+        </p>
+        <div style="margin-top: 1.5rem;">
+          <div class="video-placeholder">
+            Live stream coming soon
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why choose section -->
+    <section class="section-dark">
+      <div class="container">
+        <h2 class="section-title-light">Why Choose MVP Auctions</h2>
+        <div class="features-grid">
+          <div class="feature">
+            <img src="assets/icons/clock.svg" alt="Real-time bidding icon" />
+            <h3>Real‑Time Bidding</h3>
+            <p>
+              Live countdowns and instant bid updates keep you in the action
+              without delay.
+            </p>
+          </div>
+          <div class="feature">
+            <img src="assets/icons/lock.svg" alt="Secure payments icon" />
+            <h3>Secure Payments</h3>
+            <p>
+              All transactions are processed through trusted gateways with SSL
+              encryption.
+            </p>
+          </div>
+          <div class="feature">
+            <img
+              src="assets/icons/mobile.svg"
+              alt="Mobile friendly icon"
+            />
+            <h3>Mobile Friendly</h3>
+            <p>
+              Bid anywhere on any device—our responsive design works perfectly on
+              phones and tablets.
+            </p>
+          </div>
+          <div class="feature">
+            <img src="assets/icons/gem.svg" alt="VIP membership icon" />
+            <h3>Membership Perks</h3>
+            <p>
+              Enjoy exclusive previews, priority bidding and loyalty rewards when
+              you join our VIP program.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Authenticity guarantee section -->
+    <section class="section-dark">
+      <div class="container">
+        <h2 class="section-title-light">Authenticity Guarantee</h2>
+        <p style="max-width: 700px; margin: 0 auto; text-align: center; color: var(--text-light);">
+          We partner with the industry’s leading grading and authentication services to ensure every item sold on MVP Auctions is genuine. Each piece receives a certificate and digital record for your peace of mind.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mobile app call-to-action section -->
+    <section class="section-light">
+      <div class="container" style="text-align: center;">
+        <h2 class="section-title">Get the MVP Auctions App</h2>
+        <p style="max-width: 700px; margin: 0 auto;">
+          Coming soon! Bid on your favourite collectibles from anywhere with our free mobile app. Stay up to date with real‑time notifications and never miss out on that winning bid again.
+        </p>
+        <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="#" class="btn btn-primary" onclick="event.preventDefault(); alert('Our mobile app is coming soon! Stay tuned.');">Get the App</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works section -->
+    <section class="section-light">
+      <div class="container">
+          <h2 class="section-title">How It Works</h2>
+          <div class="steps-grid">
+            <div class="step">
+              <div class="step-number">1</div>
+              <h3>Create an Account</h3>
+              <p>Sign up for free to start buying or selling.
+              </p>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <h3>Browse &amp; Watchlist</h3>
+              <p>Use filters to find your favourite items and save them to your watchlist.</p>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <h3>Place Your Bid</h3>
+              <p>Participate in exciting auctions in real time and win the items you love.</p>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Fees and shipping section -->
+    <section class="section-light">
+      <div class="container">
+        <h2 class="section-title">Transparent Fees &amp; Shipping</h2>
+        <p style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem;">
+          We believe in simplicity and fairness when it comes to selling on our platform.  
+          MVP Auctions charges a flat <strong>10% seller commission</strong> on the final sale price—no complicated tiers or hidden costs.  
+          Buyers are responsible for shipping costs at checkout, ensuring you keep more of what you earn while buyers only pay for the delivery they need.
+        </p>
+      </div>
+    </section>
+
+    <!-- First‑time seller promo section -->
+    <section class="section-dark">
+      <div class="container">
+        <h2 class="section-title-light">First‑Time Seller Perks</h2>
+        <p style="max-width: 700px; margin: 0 auto; text-align: center; color: var(--text-light); font-size: 1.1rem;">
+          Sell with confidence! All first‑time sellers will automatically be entered into our special giveaway and pay no commission fees on their inaugural sale.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <img
+            src="assets/images/logo.png"
+            alt="MVP Auctions logo"
+            class="footer-logo"
+          />
+          <p>
+            MVP Auctions connects collectors with the most sought‑after sports
+            cards and memorabilia in the world. Built with an elite spirit for
+            fans, by fans.
+          </p>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="auctions.html">Auctions</a>
+          <a href="sell.html">Sell</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+        <div class="footer-right">
+          <p>&copy; 2025 MVP Auctions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

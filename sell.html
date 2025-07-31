@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sell Your Item – MVP Auctions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo-link">
+          <img src="assets/images/logo.png" alt="MVP Auctions logo" class="logo" />
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="auctions.html" class="nav-item">Auctions</a>
+          <a href="sell.html" class="nav-item active">Sell</a>
+          <a href="about.html" class="nav-item">About</a>
+          <a href="contact.html" class="nav-item">Contact</a>
+          <a href="blog.html" class="nav-item">Blog</a>
+          <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero" style="height: 45vh; min-height: 300px;">
+      <div class="hero-overlay"></div>
+      <img src="assets/images/hero-bg.png" alt="Abstract sports background" class="hero-bg" />
+      <div class="hero-content container">
+        <h1>Sell Your Item</h1>
+        <p>
+          Ready to consign your card or memorabilia? Use the form below to
+          submit your item details. Our team will review and get your auction
+          live in no time.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sell form section -->
+    <section class="section-light">
+      <div class="container">
+        <h2 class="section-title">Item Submission</h2>
+        <p style="max-width: 700px; margin: 0 auto 1.5rem; text-align: center; font-size: 1.05rem;">
+          Note: MVP Auctions charges a <strong>flat 10% seller commission</strong> on the final sale price of your item, and the buyer covers shipping costs.  
+          Your very first sale as a new seller is <strong>fee‑free</strong> and will automatically enter you into our exclusive giveaway!
+        </p>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Our team will review your submission.');">
+          <div class="form-group">
+            <label for="item-name">Item Name</label>
+            <input type="text" id="item-name" name="item-name" required />
+          </div>
+          <div class="form-group">
+            <label for="item-description">Description</label>
+            <textarea id="item-description" name="item-description" rows="4" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="item-category">Category</label>
+            <select id="item-category" name="item-category" required>
+              <option value="">Select a category</option>
+              <option value="basketball">Basketball</option>
+              <option value="baseball">Baseball</option>
+              <option value="football">Football</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="starting-bid">Starting Bid (USD)</label>
+            <input type="number" id="starting-bid" name="starting-bid" step="10" required />
+          </div>
+          <div class="form-group">
+            <label for="buy-now-price">Buy Now Price (USD)</label>
+            <input type="number" id="buy-now-price" name="buy-now-price" step="10" />
+          </div>
+          <div class="form-group">
+            <label for="item-photo">Item Photo</label>
+            <input type="file" id="item-photo" name="item-photo" accept="image/*" required />
+          </div>
+          <div class="form-group">
+            <label for="shipping-cost">Shipping Cost (USD)</label>
+            <input type="number" id="shipping-cost" name="shipping-cost" step="1" />
+          </div>
+
+          <!-- Payment methods -->
+          <div class="form-group">
+            <label>Accepted Payment Methods</label>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+              <label><input type="checkbox" name="payment-method" value="credit-card" /> Credit Card</label>
+              <label><input type="checkbox" name="payment-method" value="paypal" /> PayPal</label>
+              <label><input type="checkbox" name="payment-method" value="apple-pay" /> Apple Pay</label>
+            </div>
+          </div>
+
+          <!-- Shipping carriers -->
+          <div class="form-group">
+            <label for="shipping-carrier">Preferred Shipping Carrier</label>
+            <select id="shipping-carrier" name="shipping-carrier">
+              <option value="">Select carrier</option>
+              <option value="usps">USPS</option>
+              <option value="ups">UPS</option>
+              <option value="fedex">FedEx</option>
+              <option value="dhl">DHL</option>
+            </select>
+          </div>
+
+          <!-- Additional photos -->
+          <div class="form-group">
+            <label for="additional-photos">Additional Photos (optional)</label>
+            <input type="file" id="additional-photos" name="additional-photos" accept="image/*" multiple />
+          </div>
+
+          <!-- Video link -->
+          <div class="form-group">
+            <label for="video-link">Video Preview URL (optional)</label>
+            <input type="url" id="video-link" name="video-link" placeholder="https://" />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Item</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <img src="assets/images/logo.png" alt="MVP Auctions logo" class="footer-logo" />
+          <p>
+            MVP Auctions connects collectors with the most sought‑after sports
+            cards and memorabilia in the world. Built with an elite spirit for
+            fans, by fans.
+          </p>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="auctions.html">Auctions</a>
+          <a href="sell.html">Sell</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+        <div class="footer-right">
+          <p>&copy; 2025 MVP Auctions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

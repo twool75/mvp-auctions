@@ -12,6 +12,17 @@
 */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Update all logo images to use the new logo file.
+  // The site originally references a logo located under assets/images in each
+  // HTML file. Since we've uploaded a new logo (logo.png) to the repository
+  // root, set the src attribute of every element with the .logo class to this
+  // file so that the navigation bar and footer across all pages display the
+  // same branding without modifying each HTML template individually. This
+  // executes immediately after the DOM is ready.
+  document.querySelectorAll('.logo').forEach((img) => {
+    img.src = 'logo.png';
+  });
+
   // Load custom auction data from localStorage and apply to the DOM.  This
   // allows the admin page to persist edits across sessions without a backend.
   function applyAuctionData(sectionId, dataArray) {

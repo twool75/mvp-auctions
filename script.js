@@ -12,17 +12,94 @@
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Update all logo images to use the new logo file.
-  // The site originally references a logo located under assets/images in each
-  // HTML file. Since we've uploaded a new logo (logo.png) to the repository
-  // root, set the src attribute of every element with the .logo class to this
-  // file so that the navigation bar and footer across all pages display the
-  // same branding without modifying each HTML template individually. This
-  // executes immediately after the DOM is ready.
+  // Ensure all logos point to the root-level logo file rather than assets/images
   document.querySelectorAll('.logo').forEach((img) => {
-    img.src = 'logo.png';
+    const src = img.getAttribute('src');
+    if (src && src !== 'logo.png') {
+      img.setAttribute('src', 'logo.png');
+    }
   });
 
+  // AI description generator for the sell page
+  const generateBtn = document.getElementById('generate-description-btn');
+  if (generateBtn) {
+    generateBtn.addEventListener('click', () => {
+      const nameInput = document.getElementById('item-name');
+      const categorySelect = document.getElementById('item-category');
+      const bidInput = document.getElementById('starting-bid');
+      const descTextarea = document.getElementById('item-description');
+      const name = nameInput ? nameInput.value.trim() : '';
+      const category = categorySelect ? categorySelect.value : '';
+      const bid = bidInput ? bidInput.value.trim() : '';
+      const descParts = [];
+      if (name) {
+        descParts.push(`Presenting ${name}`);
+      }
+      if (category) {
+        descParts.push(`perfect for ${category} collectors`);
+      }
+      if (bid) {
+        descParts.push(`starting at just $${bid}`);
+      }
+      let description = descParts.join(', ');
+      if (description) {
+        description += '. ';
+      }
+      description += "This item is a must-have addition to your collection. Don't miss your chance to own this unique piece of sports history!";
+      if (descTextarea) {
+        descTextarea.value = description;
+      }
+    });
+  }
+
+  // Shipping cost calculator for the sell page
+  const calcShipBtn = document.getElementById('calc-shipping-btn');
+  if (calcShipBtn) {
+    calcShipBtn.addEventListener('click', () => {
+      const carrierSelect = document.getElementById('shipping-carrier');
+      const weightInput = document.getElementById('item-weight');
+      const costInput = document.getElementById('shipping-cost');
+      const carrier = carrierSelect ? carrierSelect.value : '';
+      const weight = weightInput ? parseFloat(weightInput.value) : NaN;
+      if (!carrier || !weight || weight <= 0 || Number.isNaN(weight)) {
+        alert('Please select a shipping carrier and enter a valid item weight to calculate shipping cost.');
+        return;
+      }
+      let base = 0;
+      switch (carrier) {
+        case 'usps':
+          base = 4.95;
+          break;
+        case 'ups':
+          base = 6.99;
+          break;
+        case 'fedex':
+          base = 7.99;
+          break;
+        case 'dhl':
+          base = 10.95;
+          break;
+        default:
+          base = 5.0;
+      }
+      const cost = base + 0.5 * weight;
+      if (costInput) {
+        costInput.value = cost.toFixed(2);
+      }
+    });
+  }
+
+  // Track first-time sellers and enter them into a giveaway
+  const sellForm = document.querySelector('form.contact-form');
+  if (sellForm) {
+    sellForm.addEventListener('submit', () => {
+      const hasSold = localStorage.getItem('hasSoldBefore');
+      if (!hasSold) {
+        alert('Thank you for your first listing! You have been entered into our giveaway.');
+        localStorage.setItem('hasSoldBefore', 'true');
+      }
+    });
+  }
   // Load custom auction data from localStorage and apply to the DOM.  This
   // allows the admin page to persist edits across sessions without a backend.
   function applyAuctionData(sectionId, dataArray) {

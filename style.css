@@ -533,10 +533,35 @@ a {
 
 /* Responsive typography */
 @media (max-width: 768px) {
+  /* Reduce hero heading size on small screens */
   .hero-content h1 {
     font-size: 2rem;
   }
+  /* Allow navigation items to wrap and centre on mobile */
   .nav-links {
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* Display one card per row for trending and featured auctions */
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  /* Stack footer columns vertically and centre them */
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  /* Arrange footer links horizontally and wrap as needed */
+  .footer-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .footer-left,
+  .footer-right {
+    text-align: center;
   }
 }
